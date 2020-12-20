@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
 
 module.exports = {
     devServer: {
@@ -13,7 +15,12 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist/'),
+        
         filename: 'scripts/[name].js',
+    },
+    optimization: {
+        minimize: false,
+        runtimeChunk: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -27,6 +34,8 @@ module.exports = {
             filename: "[name].css",
             chunkFilename: "[id].css",
         }),
+        new VueLoaderPlugin(),
+      
     ],
     resolve: {
         alias: {
@@ -41,6 +50,10 @@ module.exports = {
                  exclude: /node_modules/,
                  use: ['babel-loader'],
              }, */
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
+            },
             {
                 test: /\.(scss|css)$/,
                 use: [{ loader: MiniCssExtractPlugin.loader, options: { publicPath: '' } }, 'css-loader', 'sass-loader'],

@@ -1,9 +1,15 @@
 
+import imgLabel from '../vue-templates/img-label.vue'
+import textLabel from '../vue-templates/text-label-1.vue'
 
-let quiz = new Vue({
+Vue.component('img-label', imgLabel);
+Vue.component('page-label', textLabel);
+
+
+window.quiz = new Vue({
     el: '#quiz',
     data: {
-        counter: 2,
+        counter: 1,
         nextBtn: document.querySelector('button[data-control="next-btn"]'),
         prevBtn: document.querySelector('button[data-control="prev-btn"]'),
     },
@@ -32,7 +38,7 @@ let quiz = new Vue({
         checkInput: function (selector) {
             let self = this;
             let input = event.target ? event.target : self.getOneElem(selector);
-            if (input.value.trim() ) {
+            if (input.value.trim()) {
                 return true;
             } else {
                 return false;
@@ -48,7 +54,7 @@ let quiz = new Vue({
             this.nextBtn.setAttribute('disabled', 'disabled');
         },
         enableNextBtn: function () {
-            this.nextBtn.removeAttribute('disabled');  
+            this.nextBtn.removeAttribute('disabled');
         },
         disablePrevBtn: function () {
             this.prevBtn.setAttribute('disabled', 'disabled');

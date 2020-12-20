@@ -15,10 +15,11 @@
                         <h2 v-bind:class="{ active: counter === 1 }" class="questions-container__question"></h2>
                     </div>
                 </div>
-
+                
                 <div class="quiz-body__quiz-pages">
-                    <div class="quiz-pages__page quiz-pages__page-1">
-                        <div v-bind:class="{ active: counter === 1 }" class="page__main-content page-1__main-content"></div>
+                    <div  v-bind:class="{ active: counter === 1 }" class="quiz-pages__page quiz-pages__page-1">
+                        <div class="page__main-content page-1__main-content">
+                        </div>
                     </div>
                 </div>
 
