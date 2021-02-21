@@ -8,11 +8,17 @@
       v-bind:name="name"
       class="page__check"
     />
+<<<<<<< HEAD
     <span class="page__check-custom"></span>
     <span class="page__check-custom-2"></span>
     <span class="page__label-bg"></span>
     <span class="page__answer"><slot></slot></span>
 
+=======
+    <span class="page__answer">{{ answer }}</span>
+    <span class="page__check-custom"></span>
+    <span class="page__check-custom-2"></span>
+>>>>>>> bb8fdb96a89fc4409e0473734d95b6648959f642
   </label>
 </template>
 
@@ -36,6 +42,10 @@ var textLabel = {
     }
   },
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> bb8fdb96a89fc4409e0473734d95b6648959f642
 export default {
   name: "page-label",
   props: ["type", "id", "name", "answer"],

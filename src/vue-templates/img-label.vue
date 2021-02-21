@@ -35,6 +35,10 @@ var imgLabel = {
     }
   },
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> bb8fdb96a89fc4409e0473734d95b6648959f642
 export default {
   name: "img-label",
   props: ["type", "id", "name", "answer", "src"],
@@ -50,4 +54,12 @@ export default {
     }
   },
 };
+<<<<<<< HEAD
 </script>
+=======
+</script>
+
+
+
+
+>>>>>>> bb8fdb96a89fc4409e0473734d95b6648959f642

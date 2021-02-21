@@ -1,0 +1,22 @@
+
+
+.quiz-pages {
+    &__page {
+        display: none;
+        position: absolute;
+        transform: translateX(-500px);
+        opacity: 0;
+        &.active {
+            display: block;
+            position: static;
+            animation: showQuizElems 2.5s linear 1 forwards;
+        }
+    }
+}
+
+@keyframes showQuizElems {
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

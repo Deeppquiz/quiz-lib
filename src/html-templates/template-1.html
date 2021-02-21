@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="quiz-container">
+        <form action="" class="quiz" id="quiz">
+            <div class="quiz__quiz-body">
+
+                <div class="quiz-body__quiz-header">
+                    <div class="quiz-header__questions-container">
+                        <h2 v-bind:class="{ active: counter === 1 }" class="questions-container__question"></h2>
+                    </div>
+                </div>
+                
+                <div class="quiz-body__quiz-pages">
+                    <div  v-bind:class="{ active: counter === 1 }" class="quiz-pages__page quiz-pages__page-1">
+                        <div class="page__main-content page-1__main-content">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-body__quiz-footer">
+                    <button data-control='prev-btn' v-on:click="switchToPrev" type="button" class="quiz-footer__btn">Назад</button>
+                    <button data-control='next-btn' v-on:click="switchToNext" type="button" class="quiz-footer__btn">Вперёд</button>
+                </div>
+
+            </div>
+            
+            <div class="quiz__quiz-aside"></div>
+        </form>
+    </div>
+</body>
+</html>
